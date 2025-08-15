@@ -1,0 +1,5 @@
+# Ignore large generated files
+books_full/
+.ragatouille/colbert/indexes/
+indexes/
+log.log
