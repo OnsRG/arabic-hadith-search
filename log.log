@@ -1,45 +1,0 @@
-/teamspace/studios/this_studio/indexation.py:3: UserWarning: 
-********************************************************************************
-RAGatouille WARNING: Future Release Notice
---------------------------------------------
-RAGatouille version 0.0.10 will be migrating to a PyLate backend 
-instead of the current Stanford ColBERT backend.
-PyLate is a fully mature, feature-equivalent backend, that greatly facilitates compatibility.
-However, please pin version <0.0.10 if you require the Stanford ColBERT backend.
-********************************************************************************
-  from ragatouille import RAGPretrainedModel
-/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/colbert/utils/amp.py:12: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
-  self.scaler = torch.cuda.amp.GradScaler()
----- WARNING! You are using PLAID with an experimental replacement for FAISS for greater compatibility ----
-This is a behaviour change from RAGatouille 0.8.0 onwards.
-This works fine for most users and smallish datasets, but can be considerably slower than FAISS and could cause worse results in some situations.
-If you're confident with FAISS working on your machine, pass use_faiss=True to revert to the FAISS-using behaviour.
---------------------
-
-
-[Jul 28, 16:32:15] #> Creating directory .ragatouille/colbert/indexes/books_full 
-
-
-[Jul 28, 16:32:16] [0] 		 #> Encoding 36892 passages..
-/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/colbert/utils/amp.py:15: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
-  return torch.cuda.amp.autocast() if self.activated else NullContextManager()
-[Jul 28, 16:33:13] [0] 		 avg_doclen_est = 54.41895294189453 	 len(local_sample) = 36,892
-[Jul 28, 16:33:13] [0] 		 Creating 16,384 partitions.
-[Jul 28, 16:33:13] [0] 		 *Estimated* 2,410,868 embeddings.
-[Jul 28, 16:33:13] [0] 		 #> Saving the indexing plan to .ragatouille/colbert/indexes/books_full/plan.json ..
-used 20 iterations (2.7532s) to cluster 1957624 items into 16384 clusters
-[Jul 28, 16:33:17] Loading decompress_residuals_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
-[Jul 28, 16:33:18] Loading packbits_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
-[0.043, 0.041, 0.043, 0.047, 0.04, 0.042, 0.041, 0.04, 0.042, 0.042, 0.042, 0.042, 0.044, 0.04, 0.043, 0.044, 0.039, 0.04, 0.038, 0.039, 0.042, 0.043, 0.039, 0.043, 0.042, 0.043, 0.04, 0.041, 0.041, 0.04, 0.041, 0.043, 0.04, 0.041, 0.04, 0.045, 0.042, 0.04, 0.044, 0.042, 0.043, 0.044, 0.042, 0.042, 0.043, 0.045, 0.042, 0.04, 0.04, 0.051, 0.043, 0.046, 0.041, 0.044, 0.046, 0.042, 0.043, 0.046, 0.044, 0.044, 0.042, 0.04, 0.046, 0.045, 0.041, 0.04, 0.043, 0.043, 0.041, 0.044, 0.042, 0.04, 0.046, 0.041, 0.04, 0.043, 0.05, 0.039, 0.04, 0.04, 0.041, 0.04, 0.041, 0.039, 0.042, 0.041, 0.04, 0.044, 0.042, 0.04, 0.04, 0.044, 0.046, 0.045, 0.044, 0.04, 0.042, 0.043, 0.039, 0.04, 0.041, 0.042, 0.04, 0.04, 0.043, 0.047, 0.043, 0.042, 0.042, 0.041, 0.042, 0.044, 0.042, 0.045, 0.043, 0.039, 0.041, 0.04, 0.039, 0.041, 0.042, 0.042, 0.042, 0.04, 0.043, 0.043, 0.042, 0.046]
-0it [00:00, ?it/s][Jul 28, 16:33:18] [0] 		 #> Encoding 25000 passages..
-/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/colbert/utils/amp.py:15: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
-  return torch.cuda.amp.autocast() if self.activated else NullContextManager()
-1it [00:40, 40.76s/it][Jul 28, 16:33:59] [0] 		 #> Encoding 19302 passages..
-2it [01:10, 34.38s/it]2it [01:10, 35.34s/it]
-  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 109.77it/s]
-[Jul 28, 16:34:29] #> Optimizing IVF to store map from centroids to list of pids..
-[Jul 28, 16:34:29] #> Building the emb2pid mapping..
-[Jul 28, 16:34:29] len(emb2pid) = 2412227
-  0%|          | 0/16384 [00:00<?, ?it/s] 43%|████▎     | 7092/16384 [00:00<00:00, 70907.39it/s] 87%|████████▋ | 14183/16384 [00:00<00:00, 68282.92it/s]100%|██████████| 16384/16384 [00:00<00:00, 69135.40it/s]
-[Jul 28, 16:34:29] #> Saved optimized IVF to .ragatouille/colbert/indexes/books_full/ivf.pid.pt
-Done indexing!
