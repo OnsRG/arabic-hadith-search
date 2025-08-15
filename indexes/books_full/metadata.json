@@ -1,0 +1,73 @@
+{
+  "config":{
+    "query_token_id":"[unused0]",
+    "doc_token_id":"[unused1]",
+    "query_token":"[Q]",
+    "doc_token":"[D]",
+    "ncells":null,
+    "centroid_score_threshold":null,
+    "ndocs":null,
+    "load_index_with_mmap":false,
+    "index_path":null,
+    "index_bsize":32,
+    "nbits":2,
+    "kmeans_niters":20,
+    "resume":false,
+    "pool_factor":1,
+    "clustering_mode":"hierarchical",
+    "protected_tokens":0,
+    "similarity":"cosine",
+    "bsize":64,
+    "accumsteps":1,
+    "lr":0.00001,
+    "maxsteps":3125,
+    "save_every":2783,
+    "warmup":2783,
+    "warmup_bert":null,
+    "relu":false,
+    "nway":2,
+    "use_ib_negatives":true,
+    "reranker":false,
+    "distillation_alpha":1.0,
+    "ignore_scores":false,
+    "model_name":"Arabic-ColBERT",
+    "query_maxlen":32,
+    "attend_to_mask_tokens":false,
+    "interaction":"colbert",
+    "dim":128,
+    "doc_maxlen":256,
+    "mask_punctuation":true,
+    "checkpoint":"akhooli/Arabic-ColBERT-100K",
+    "triples":"data/triples.train.colbert.jsonl",
+    "collection":[
+      "list with 44296 elements starting with...",
+      [
+        "\u0642\u0627\u0644 \u0631\u0633\u0648\u0644 \u0627\u0644\u0644\u0647 \u0635\u0644\u0649 \u0627\u0644\u0644\u0647 \u0639\u0644\u064a\u0647 \u0648\u0633\u0644\u0645 \"\u062f\u0639\u0647 \u0641\u0625\u0646 \u0627\u0644\u062d\u064a\u0627\u0621 \u0645\u0646 \u0627\u0644\u0625\u064a\u0645\u0627\u0646\" ((\u0645\u062a\u0641\u0642 \u0639\u0644\u064a\u0647)) .",
+        "\u0642\u0627\u0644 \u0631\u0633\u0648\u0644 \u0627\u0644\u0644\u0647 \u0635\u0644\u0649 \u0627\u0644\u0644\u0647 \u0639\u0644\u064a\u0647 \u0648\u0633\u0644\u0645 \" \u0627\u0644\u062d\u064a\u0627\u0621 \u0644\u0627 \u064a\u0623\u062a\u0649 \u0625\u0644\u0627 \u0628\u062e\u064a\u0631\" ((\u0645\u062a\u0641\u0642 \u0639\u0644\u064a\u0647)) . \u0648\u0641\u064a \u0631\u0648\u0627\u064a\u0629 \u0644\u0645\u0633\u0644\u0645\"  \"\u0627\u0644\u062d\u064a\u0627\u0621\u0647 \u062e\u064a\u0631 \u0643\u0644\u0647\"\u0623\u0648\u0642\u0627\u0644 \"\u0627\u0644\u062d\u064a\u0627\u0621 \u0643\u0644\u0647 \u062e\u064a\u0631\".",
+        "\u0631\u0633\u0648\u0644 \u0627\u0644\u0644\u0647 \u0635\u0644\u0649 \u0627\u0644\u0644\u0647 \u0639\u0644\u064a\u0647 \u0648\u0633\u0644\u0645 \u0642\u0627\u0644 \"\u0627\u0644\u0625\u064a\u0645\u0627\u0646 \u0628\u0636\u0639 \u0648\u0633\u0628\u0639\u0648\u0646\u060c \u0623\u0648 \u0628\u0636\u0639 \u0648\u0633\u062a\u0648\u0646 \u0634\u0639\u0628\u0629\u060c \u0641\u0623\u0641\u0636\u0644\u0647\u0627 \u0642\u0648\u0644 \u0644\u0627 \u0625\u0644\u0647 \u0625\u0644\u0627 \u0627\u0644\u0644\u0647\u060c \u0648\u0623\u062f\u0646\u0627\u0647\u0627 \u0625\u0645\u0627\u0637\u0629 \u0627\u0644\u0623\u0630\u0649 \u0639\u0646 \u0627\u0644\u0637\u0631\u064a\u0642\u060c \u0648\u0627\u0644\u062d\u064a\u0627\u0621 \u0634\u0639\u0628\u0629 \u0645\u0646 \u0627\u0644\u0625\u064a\u0645\u0627\u0646\" ((\u0645\u062a\u0641\u0642 \u0639\u0644\u064a\u0647)) ."
+      ]
+    ],
+    "queries":"data/queries.train.colbert.tsv",
+    "index_name":"books_full",
+    "overwrite":false,
+    "root":".ragatouille/",
+    "experiment":"colbert",
+    "index_root":null,
+    "name":"2025-07/30/08.54.56",
+    "rank":0,
+    "nranks":1,
+    "amp":true,
+    "gpus":1,
+    "avoid_fork_if_possible":false
+  },
+  "num_chunks":2,
+  "num_partitions":16384,
+  "num_embeddings":2411257,
+  "avg_doclen":54.4350957197,
+  "RAGatouille":{
+    "index_config":{
+      "index_type":"PLAID",
+      "index_name":"books_full"
+    }
+  }
+}
