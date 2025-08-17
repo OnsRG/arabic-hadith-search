@@ -58,5 +58,6 @@ If you’d like to add features, improve code, or optimize indexing, please open
 ## 📜 License
 
 This project is licensed under the MIT License — free to use and modify.
+
 ---
 ✨ Built with ❤️ during my Summer Internship to make Arabic Hadith retrieval smarter and more accessible.
