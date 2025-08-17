@@ -45,7 +45,6 @@ streamlit run app3.py
 ```
 Then open http://localhost:8501 in your browser.
 
-### App Screenshot
 This is an example of what you will see when using the app:
 
 ![App Screenshot](app1screenshot.png)
