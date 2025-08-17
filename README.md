@@ -1,4 +1,4 @@
-# Modern Arabic Hadith Retrieval — combining lexical and semantic search to handle nuanced queries in Arabic
+# Modern Arabic Hadith Retrieval — a semantic search approach
 
 This project is a **modern Hadith retrieval engine** designed to improve search quality for Arabic text.  
 It combines **lexical retrieval** (BM25) with **semantic retrieval** (ColBERT) to handle nuanced Arabic queries and return highly relevant Hadith passages.
@@ -31,4 +31,15 @@ Then open http://localhost:8501 in your browser.
 ## 📂 Indexes
 FAISS indexes are not included in this repository due to size limits.  
 You have to : 
-- Or build your own by running `indexation.py` on your Hadith collection.
+- Build your own by running `indexation.py` on your Hadith collection.
+
+## 🤝 Contributing
+
+Contributions are welcome!
+If you’d like to add features, improve code, or optimize indexing, please open an issue or submit a pull request.
+
+## 📜 License
+
+This project is licensed under the MIT License — free to use and modify.
+
+✨ Built with ❤️ during my Summer Internship to make Arabic Hadith retrieval smarter and more accessible.
