@@ -12,7 +12,29 @@ It combines **lexical retrieval** (BM25) with **semantic retrieval** (ColBERT) t
 - **Interactive UI**: Powered by Streamlit for an easy-to-use interface.  
 
 ---
+## Project structure
+```bash
+modern-arabic-hadith-retrieval/
+│── books_cleaned_structured/ # Contains cleaned Hadith books (diacritics removed, normalized text, structured with metadata like chapters & references)
+│── books_with_matn/ # Similar to books_cleaned_structured, but with matn extraction applied — isolates the main Hadith content from isnād.
+│── hadith_books/ # Raw/original Hadith data
+│
+│── app3.py # Main Streamlit app (UI for search)
+│── data_loader.py # Loads and prepares the Hadith corpus from preprocessed JSON files.
+│── indexation.py # Builds the RAG index (books_full) with text + metadata for hybrid search.
+│── search_engine.py # Defines the HadithSearchSystem class:
 
+#Semantic Search: Uses ColBERT (via RAGatouille) to retrieve contextually relevant Hadiths.
+
+#Lexical Search: Uses BM25 to perform keyword-based search.
+
+#Hybrid Search: Combines both approaches — first retrieves candidates with BM25, then reranks them semantically with ColBERT for maximum accuracy.
+│── phase1_explore_data.ipynb # Data exploration and preprocessing + baseline retrieval experiments.
+│
+│── requirements.txt # Python dependencies
+│── README.md # Project documentation
+│── .gitignore # Ignored files (indexes)
+```
 ## 🛠 Installation
 Clone the repository and install dependencies:
 
